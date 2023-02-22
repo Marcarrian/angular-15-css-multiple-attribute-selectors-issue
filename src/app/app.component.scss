@@ -1,0 +1,14 @@
+:host {
+  &:is([data-foo="bar"]) {
+    > div.example-1 {
+      background-color: lightskyblue; // working in dev and prod build
+    }
+  }
+
+  &:is([data-foo="bar"], [data-foo-2="bar-2"]) {
+    > div.example-2 {
+      background-color: violet; // ONLY working in prod build
+    }
+  }
+}
+
